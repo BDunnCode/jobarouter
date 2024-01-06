@@ -1,8 +1,12 @@
+import { Navigate } from "react-router-dom"
+import { useState } from "react"
+
+
 export default function About() {
   const [user, setUser] = useState('mario')
 
   if (!user) {
-    return <Navigate to="/" />
+    return <Navigate to="/" replace={true} />
   }
 
   return (
